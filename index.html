@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A retro endless runner game: jump over tanks and try to beat your high score.">
+  <title>Veeramani Tank Jump</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <header class="site-header">
+      <div class="brand-mark">VTJ</div>
+      <div>
+        <p class="eyebrow">A tiny browser arcade</p>
+        <h1>VEERAMANI <span>TANK JUMP</span></h1>
+      </div>
+      <button id="soundBtn" class="small-button" type="button" aria-pressed="false">🔊 Sound: off</button>
+    </header>
+
+    <section class="game-card" aria-label="Veeramani Tank Jump game">
+      <div class="sky-decor cloud cloud-one"></div>
+      <div class="sky-decor cloud cloud-two"></div>
+      <div class="mountains"></div>
+      <div class="game-hud">
+        <div class="lives-wrap"><span class="hud-label">LIVES</span><div id="lives" class="lives" aria-label="3 lives">♥ ♥ ♥</div></div>
+        <div class="instructions"><strong>JUMP OVER THE TANKS!</strong><span>Touch a tank and lose a life.</span></div>
+        <div class="score-wrap"><span class="hud-label">SCORE</span><strong id="score">00000</strong><span class="best">BEST <b id="best">00000</b></span></div>
+      </div>
+
+      <div id="gameWorld" class="game-world">
+        <div id="player" class="player" aria-label="Player">
+          <img id="heroImage" src="images/veeramani.png" alt="Veeramani jumping">
+        </div>
+        <div id="obstacles" class="obstacles"></div>
+        <div class="ground">
+          <div class="grass"></div>
+          <div class="dirt"></div>
+        </div>
+      </div>
+
+      <div id="overlay" class="overlay">
+        <div class="overlay-panel">
+          <div class="pixel-badge">READY?</div>
+          <h2 id="overlayTitle">Ready to jump?</h2>
+          <p id="overlayText">Avoid the tanks for as long as you can. You have 3 lives.</p>
+          <button id="startBtn" class="primary-button" type="button">▶ Start game</button>
+          <p class="controls-hint">SPACE / ↑ / W / TAP to jump</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="below-grid">
+      <article class="info-card">
+        <span class="section-icon">🎮</span>
+        <h2>How to play</h2>
+        <p>Jump over the tanks. Every tank you pass adds to your score. A collision costs one life; the game ends when all three lives are gone.</p>
+      </article>
+      <article class="info-card">
+        <span class="section-icon">⚡</span>
+        <h2>Controls</h2>
+        <p><kbd>SPACE</kbd> <kbd>↑</kbd> <kbd>W</kbd> or tap the game area to jump. Press <kbd>P</kbd> to pause and <kbd>R</kbd> to restart.</p>
+      </article>
+      <article class="info-card">
+        <span class="section-icon">☁</span>
+        <h2>Made for deployment</h2>
+        <p>Plain HTML, CSS and JavaScript. No build step, framework, API key or external image download is required.</p>
+      </article>
+    </section>
+    <footer>VEERAMANI TANK JUMP <span>•</span> Built with HTML, CSS & JavaScript</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
